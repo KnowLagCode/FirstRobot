@@ -23,10 +23,10 @@ def spin_left(bot, seconds):
 
 bot = robot.Robot()
 straight(bot, 1)
-turn_right(bot, 1)
+turn_right(bot, 0.6)
 straight(bot, 1)
-turn_left(bot, 1)
+turn_left(bot, 0.6)
 straight(bot, 1)
-turn_left(bot, 1)
+turn_left(bot, 0.6)
 straight(bot, 1)
 spin_left(bot, 1)
