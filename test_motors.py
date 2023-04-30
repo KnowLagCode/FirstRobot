@@ -17,5 +17,5 @@ leftMotor.setSpeed(150)
 rightMotor.setSpeed(150)
 
 leftMotor.run(Raspi_MotorHAT.FORWARD)
-rightMotor.run(Raspi_MotorHAT.FORWARD)
+rightMotor.run(Raspi_MotorHAT.BACKWARD)
 time.sleep(1)
