@@ -11,6 +11,9 @@ class Robot:
 
         atexit.register(self.stop_motors)
 
+    def convert_speed(self, speed):
+        return (speed * 255) // 100
+
     def stop_motors(self):
         self.leftMotor.run(Raspi_MotorHAT.RELEASE)
         self.rightMotor.run(Raspi_MotorHAT.RELEASE)
