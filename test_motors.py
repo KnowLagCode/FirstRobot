@@ -13,9 +13,9 @@ def turn_off_motors():
 
 atexit.register(turn_off_motors)
 
-leftMotor.setSpeed(150)
+leftMotor.setSpeed(100)
 rightMotor.setSpeed(150)
 
 leftMotor.run(Raspi_MotorHAT.FORWARD)
-rightMotor.run(Raspi_MotorHAT.BACKWARD)
+rightMotor.run(Raspi_MotorHAT.FORWARD)
 time.sleep(1)
