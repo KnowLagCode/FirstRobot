@@ -3,7 +3,7 @@ from Raspi_MotorHAT import Raspi_MotorHAT
 import time
 import atexit
 
-motorHat = Raspi_MotorHAT(addr=0x60)
+motorHat = Raspi_MotorHAT(addr=0x6f)
 leftMotor = motorHat.getMotor(1)
 rightMotor = motorHat.getMotor(2)
 
