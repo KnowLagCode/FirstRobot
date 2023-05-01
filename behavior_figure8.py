@@ -8,11 +8,11 @@ def straight(bot, seconds):
 
 def turn_left(bot, seconds):
     bot.set_left(20)
-    bot.set_right(80)
+    bot.set_right(90)
     sleep(seconds)
 
 def turn_right(bot, seconds):
-    bot.set_left(80)
+    bot.set_left(90)
     bot.set_right(20)
     sleep(seconds)
 
