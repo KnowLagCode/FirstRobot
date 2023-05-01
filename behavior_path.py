@@ -2,13 +2,13 @@ import robot
 from time import sleep
 
 def straight(bot, seconds):
-    bot.set_left(80)
-    bot.set_right(80)
+    bot.set_left(75)
+    bot.set_right(85)
     sleep(seconds)
 
 def backward(bot, seconds):
-    bot.set_left(-80)
-    bot.set_right(-80)
+    bot.set_left(-75)
+    bot.set_right(-85)
     sleep(seconds)
 
 def turn_left(bot, seconds):
