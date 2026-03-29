@@ -1,4 +1,6 @@
-Use ping firstrobot.local to check if connection is good
-Use ssh firstrobot@firstrobot.local to connect
-Password still forgotten
-found the password, it is password
+copy file to robot: scp "filename" firstrobot@firstrobot.locl:/home/firstrobot/
+connect to robot: ssh firstrobot@firstrobot.local
+robot password: password
+install files: pip3
+run files: python3 "filename"
+check files: ls
