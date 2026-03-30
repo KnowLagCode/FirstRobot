@@ -48,6 +48,8 @@ class ObstacleAvoidingBehavior:
                 self.robot.set_left(furthest_speed)
 
             sleep(delay * 0.001)
-bot = Robot()
-behavior = ObstacleAvoidingBehavior(bot)
-behavior.run()
+
+if __name__ == "__main__":
+    bot = Robot()
+    behavior = ObstacleAvoidingBehavior(bot)
+    behavior.run()

@@ -25,6 +25,8 @@ class ObstacleAvoidingBehavior:
             self.robot.set_right(right_speed)
 
             sleep(0.05)
-bot = Robot()
-behavior = ObstacleAvoidingBehavior(bot)
-behavior.run()
+
+if __name__ == "__main__":
+    bot = Robot()
+    behavior = ObstacleAvoidingBehavior(bot)
+    behavior.run()
