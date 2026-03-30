@@ -1,4 +1,5 @@
 from Raspi_MotorHAT import Raspi_MotorHAT
+from gpiozero import DistanceSensor
 
 import atexit
 
@@ -8,6 +9,8 @@ class Robot:
 
         self.leftMotor = self.motorHat.getMotor(1)
         self.rightMotor = self.motorHat.getMotor(2)
+        self.left_distance_sensor = DistanceSensor(echo=17, trigger=27, queue_len=2)
+        self.right_distance_sensor = DistanceSensor(echo=5, trigger=6, queue_len=2)
 
         atexit.register(self.stop_motors)
 
