@@ -5,6 +5,22 @@ class ObstacleAvoidingBehavior:
     def __init__(self, the_robot):
         self.robot = the_robot
         self.speed = 60
+        self.led_half = int(self.robot.leds.count/2)
+        self.sense_color = 0, 0, 255
+
+    def distance_to_led_bar(self, distance):
+        inverted = max(0, 1.0 - distance)
+        led_bar = int(round(inverted * self.led_half)) + 1
+        return led_bar
+
+    def display_state(self, left_distance, right_distance):
+        self.robot.leds.clear()
+        led_bar = self.distance_to_led_bar(left_distance)
+        self.robot.leds.set_range(range(led_bar), self.sense_color)
+        led_bar = self.distance_to_led_bar(right_distance)
+        start = (self.robot.leds.count - 1) - led_bar
+        self.robot.leds.set_range(range(start, self.robot.leds.count - 1), self.sense_color)
+        self.robot.leds.show()
 
     def get_speeds(self, nearest_distance):
         if nearest_distance >= 1.0:
@@ -33,6 +49,7 @@ class ObstacleAvoidingBehavior:
         while True:
             left_distance = self.robot.left_distance_sensor.distance
             right_distance = self.robot.right_distance_sensor.distance
+            self.display_state(left_distance, right_distance)
 
             print("Left: {l:.2f}, Right: {r:.2f}".format(l = left_distance, r = right_distance))
 

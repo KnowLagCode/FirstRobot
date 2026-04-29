@@ -1,3 +1,4 @@
+import hardware_setup
 from Raspi_MotorHAT import Raspi_MotorHAT
 from gpiozero import DistanceSensor
 
